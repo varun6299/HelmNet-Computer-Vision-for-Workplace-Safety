@@ -3,7 +3,7 @@
 *A deep learning solution for automated helmet detection to ensure workplace compliance and safety.*
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_logo.png" width="600"/>
 </p>
 
 ---
