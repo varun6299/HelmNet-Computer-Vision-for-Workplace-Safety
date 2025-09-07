@@ -1,9 +1,5 @@
 # HelmNet — Computer Vision for Workplace Safety
 
-<p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
-</p>
-
 *A deep learning solution for automated helmet detection to ensure workplace compliance and safety.*
 
 <p align="center">
@@ -57,13 +53,13 @@ This ensures robust learning for real-world deployment.
   - “With Helmet” images feature distinct helmet shapes that stand out from caps or other headwear.
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_Label_Examples.png" width="600"/>
 </p>
   
 - **Class balance:** Nearly 50-50, reducing the need for resampling.
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_Label_Distribution.png" width="600"/>
 </p>
 
 - **Strong separability:** Visual differences between classes suggest feasibility for CNN-based classification .  
@@ -78,7 +74,7 @@ Before training, the image dataset was prepared carefully to ensure compatibilit
    - Original RGB format retained, as helmets rely on color/texture cues that grayscale images may lose.
   
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_Grayscale.png" width="600"/>
 </p>
 
 2. **Normalization**  
@@ -125,14 +121,14 @@ Two models were designed and benchmarked to evaluate the trade-offs between cust
   - Pre-trained **VGG16** model used as a fixed feature extractor.
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_VGG16_architecture.png" width="600"/>
 </p>
 
   - Convolutional base layers frozen to retain learned filters.  
   - Added custom dense layers (fully connected) for binary classification (helmet/no helmet).
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_Sequential_VGG16.png" width="600"/>
 </p>
 
 - **Optimizer & Loss:**  
@@ -175,7 +171,7 @@ To evaluate model performance, multiple metrics were considered beyond simple ac
 
 ---
 
-## Model Results & Comparison (Full)
+## Model Results & Comparison
 
 | Model                              | Train Accuracy | Validation Accuracy | Training Time (s) | Notes |
 |-----------------------------------|----------------|----------------------|-------------------|-------|
@@ -191,7 +187,11 @@ To evaluate model performance, multiple metrics were considered beyond simple ac
 - Provides the **best trade-off between simplicity, speed, and accuracy**.
 
 <p align="center">
-  <img src="images/Renewind_logo.png" width="600"/>
+  <img src="images/HelmNet_VGG16_Confusion_Matrix.png" width="600"/>
+</p>
+
+<p align="center">
+  <img src="images/HelmNet_VGG16_Model_Performance.png" width="600"/>
 </p>
 
 ---
